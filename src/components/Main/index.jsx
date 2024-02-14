@@ -5,7 +5,6 @@ import category from '../../assets/images/Category.svg'
 //import styles
 import styles from './index.module.scss'
 
-
 const Main = () => {
     return (
         <div className={styles.main}>

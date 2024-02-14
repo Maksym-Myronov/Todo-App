@@ -1,0 +1,25 @@
+.main {
+    &__pagination {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 490px 0px 490px;
+        gap: 10px;
+        position: fixed;
+        top: 660px;
+    }
+
+    &__btns {
+        background: white;
+        padding: 7px 10px 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    &__number {
+        border-radius: 8px;
+        background: #FDA371;
+        color: white;
+        padding: 7px 10px 7px 10px;
+    }
+}

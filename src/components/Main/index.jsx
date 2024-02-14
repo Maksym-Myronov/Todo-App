@@ -4,6 +4,7 @@ import BurgerMenu from '../BurgerMenu/index'
 import category from '../../assets/images/Category.svg'
 //import styles
 import styles from './index.module.scss'
+import Card from './Card'
 
 const Main = () => {
     return (
@@ -18,6 +19,7 @@ const Main = () => {
                 </div>
             </div>
             <div>
+                <Card />
                 <Pagination />
             </div>
         </div>

@@ -4,16 +4,16 @@ import { fetchTodo } from "../reducers/todosSlice";
 
 export const usePagination = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 5;
-    const items = useSelector(state => state.todo.todos.todos);
+    const itemsPerPage = 7;
+    const items = useSelector(state => state.todo.todos);
     const dispatch = useDispatch();
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const currentItems = Array.isArray(items) ? items.slice(startIndex, endIndex) : null;
-
+    
     useEffect(() => {
         dispatch(fetchTodo())
-    }, [dispatch])
+    }, [ dispatch]);
 
     const totalPages = Math.ceil(items && items.length  / itemsPerPage);
 

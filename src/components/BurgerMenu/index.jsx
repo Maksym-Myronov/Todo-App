@@ -3,11 +3,25 @@ import images from '../../assets/images/Path_34201.svg'
 import edit from '../../assets/images/Edit Square.svg'
 //import Styles
 import styles from './index.module.scss';
+import { useDispatch } from 'react-redux';
+import { addNewTask } from '../../reducers/todosSlice';
 
 const BurgerMenu = () => {
 
+    const dispatch = useDispatch()
     const [isOpen, setIsOpen] = useState(false)
     const [newText, setNewText] = useState("")
+
+    const handleCreateTask = (text) => {
+        if(newText.trim() === "") {
+            alert("You cannot enter an empty line")
+            return
+        }
+
+        dispatch(addNewTask(text))
+        setIsOpen(false)
+        setNewText("")
+    }
 
     return (
         <div className={styles.main}>
@@ -36,7 +50,7 @@ const BurgerMenu = () => {
                         <p className={`${styles.main__helper} ${newText.length >= 100 ? styles.main__helperText : styles.main__helperTexts}`}>Helper Text <span>{newText.length}/100</span></p>
                     </div>
                     <div className={styles.main__create}>
-                        <button className={styles.main__firstBtn}>Create</button>
+                        <button className={styles.main__firstBtn} onClick={() => handleCreateTask({title: newText, completed: false})}>Create</button>
                         <button className={styles.main__secondBtn}>Clear</button>
                     </div>
                 </div>

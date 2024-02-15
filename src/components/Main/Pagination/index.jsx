@@ -1,4 +1,3 @@
-import { usePagination } from '../../../hooks/usePagination'
 import paginationOne from '../../../assets/images/First.svg'
 import paginationTwo from '../../../assets/images/Prev.svg'
 import paginationThree from '../../../assets/images/Next.svg'
@@ -6,9 +5,7 @@ import paginationFour from '../../../assets/images/Last.svg'
 //import styles
 import styles from './index.module.scss'
 
-const Pagination = () => {
-
-    const {currentItems, handlePreviousPage, handleFirstPage, handleNextPage, handleLastPage, currentPage, totalPages} = usePagination()
+const Pagination = ({handlePreviousPage, handleFirstPage, handleNextPage, handleLastPage, currentPage, totalPages}) => {
 
     return (
         <div>

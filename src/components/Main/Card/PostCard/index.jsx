@@ -1,7 +1,4 @@
-import { useEffect } from 'react';
-import {  useDispatch } from 'react-redux';
-import { fetchTodo } from '../../../../reducers/todosSlice';
-import Input from '../Input';
+// import Input from '../Input';
 //Images
 import Edit from '../../../../assets/images/Edit Square.svg';
 import Trash from '../../../../assets/images/Vector (1).svg';
@@ -9,22 +6,14 @@ import Trash from '../../../../assets/images/Vector (1).svg';
 import styles from './index.module.scss';
 
 const PostCard = ({ title, completed}) => {
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(fetchTodo())
-    }, [dispatch])
-
-
-
     return (
         <div className={styles.card}>
             <div className={styles.card__container}>
                 <div className={styles.card__checked}>
-                    <Input 
+                    {/* <Input 
                         value={completed}
                         // onChange={handleChange} 
-                    />
+                    /> */}
                     <p style={(completed) ? {textDecoration: 'line-through', color: 'blue'} : null}>
                         {title}
                     </p>

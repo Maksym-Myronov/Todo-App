@@ -1,9 +1,6 @@
-import { usePagination } from "../../../hooks/usePagination";
 import PostCard from "./PostCard";
 
-const Card = () => {    
-    const {currentItems, handlePreviousPage, handleFirstPage, handleNextPage, handleLastPage, currentPage, totalPages} = usePagination()
-    console.log(currentItems);
+const Card = ({currentItems}) => {    
     return (
         <div>
             {currentItems && currentItems.map((item) => (

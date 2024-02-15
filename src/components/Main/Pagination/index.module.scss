@@ -2,11 +2,13 @@
     &__pagination {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 0px 490px 0px 490px;
+        justify-content: center;
+        text-align: center;
         gap: 10px;
+        width: 1540px;
+        margin-left: 40px;
         position: fixed;
-        top: 660px;
+        top: 860px;
     }
 
     &__btns {

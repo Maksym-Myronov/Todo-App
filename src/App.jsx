@@ -1,6 +1,6 @@
-import { Routes, Route } from "react-router-dom"
-import Layout from "./Layout"
-import Main from './components/Main/index.jsx'
+import { Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import Main from "./components/Main/index.jsx";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         </Route>
       </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

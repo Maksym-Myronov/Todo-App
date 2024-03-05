@@ -1,0 +1,60 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "@wemake-services/javascript",
+    "prettier"
+  ],
+  "ignorePatterns": [
+    "dist",
+    ".eslintrc.json"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "18.2"
+    }
+  },
+  "plugins": [
+    "react-refresh"
+  ],
+  "rules": {
+    "react/jsx-no-target-blank": "off",
+    "react-refresh/only-export-components": [
+      "warn",
+      { "allowConstantExport": true }
+    ],
+    "no-unused-vars": "off",
+    "react/prop-types": "off",
+    "no-unused-expressions": ["error", { "allowTernary": true }],
+    "import/named": "off",
+    "no-shadow": "off",
+    "jsx-a11y/click-events-have-key-events": ["off"],
+    "no-console": ["warn", { "allow": ["warn", "error", "info", "log"] }],
+    "semi": [0, "never"],
+    "semi-spacing": [0, "never"],
+    "semi-style": [0, "never"],
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/label-has-for": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-underscore-dangle": "off",
+    "unicorn/prefer-query-selector": "off",
+    "unicorn/no-negated-condition": "off",
+    "no-alert": "off",
+    "id-length": ["error", { "min": 1, "exceptions": ["e"] }],
+    "react/jsx-filename-extension": [
+      2,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ]
+  }
+}

@@ -1,35 +1,35 @@
 .sideBar {
-    &__title {
-        display: flex;
-        align-items: center;
-        font-size: 1.4rem;
-        gap: 20px;
-        font-weight: 600;
-    }
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    gap: 20px;
+    font-weight: 600;
+  }
 
-    &__all {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        width: 200px;
-    }
-
-    &__task {
-        margin-top: 90px;
-        margin-bottom: 20px;
-        color: #9896A3;
-        font-size: 1.1rem;
-    }
-
-    &__number {
-        margin-left: 40px;
-        font-size: 0.8rem;
-    }
-
-    &__paragraph {
-        color: #9896A3;
-    }
-
+  &__all {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     width: 200px;
-    margin: 25px 30px 0px 30px;
+  }
+
+  &__task {
+    margin-top: 90px;
+    margin-bottom: 20px;
+    color: #9896a3;
+    font-size: 1.1rem;
+  }
+
+  &__number {
+    margin-left: 40px;
+    font-size: 0.8rem;
+  }
+
+  &__paragraph {
+    color: #9896a3;
+  }
+
+  width: 200px;
+  margin: 25px 30px 0px 30px;
 }

@@ -1,46 +1,46 @@
 .card {
-    background: white;
-    margin: 5px 80px 15px 40px;
-    border-radius: 10px;
-    padding: 18px 40px;
+  background: white;
+  margin: 5px 80px 15px 40px;
+  border-radius: 10px;
+  padding: 18px 40px;
 
-    &__container {
-        display: flex;
-        justify-content: space-between;
-    }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    &__input {
-        cursor: pointer;
-    }
+  &__input {
+    cursor: pointer;
+  }
 
-    &__checked {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        gap: 10px;
-    }
+  &__checked {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
 
-    &__edit {
-        display: block;
-    }
+  &__edit {
+    display: block;
+  }
 
-    &__data {
-        margin-bottom: 10px;
-    }
+  &__data {
+    margin-bottom: 10px;
+  }
 
-    &__btn {
-        display: flex;
-    }
+  &__btn {
+    display: flex;
+  }
 
-    &__button {
-        background: none;
-        cursor: pointer;
-        margin-left: 27px;
-    }
+  &__button {
+    background: none;
+    cursor: pointer;
+    margin-left: 27px;
+  }
 
-    &__buttons {
-        background: none;
-        cursor: pointer;
-        margin-left: 20px;
-    }
+  &__buttons {
+    background: none;
+    cursor: pointer;
+    margin-left: 20px;
+  }
 }

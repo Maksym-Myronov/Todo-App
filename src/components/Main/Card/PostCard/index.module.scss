@@ -28,6 +28,10 @@
     margin-bottom: 10px;
   }
 
+  &__title {
+    cursor: pointer;
+  }
+
   &__btn {
     display: flex;
   }

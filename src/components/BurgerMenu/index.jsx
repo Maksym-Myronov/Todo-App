@@ -13,13 +13,14 @@ const BurgerMenu = ({
   newText,
   handleClearInputField,
   handleCreateTask,
-  idTitle,
   cardsIsOpen,
   setCardsIsOpen,
+  idTitle,
 }) => {
   const dispatch = useDispatch();
 
   const newFunc = () => {
+    setNewText("")
     dispatch(changeTodos({ id: idTitle, newText }));
     setCardsIsOpen(!cardsIsOpen);
   };

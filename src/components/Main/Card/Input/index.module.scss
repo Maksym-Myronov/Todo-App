@@ -1,4 +1,8 @@
 .input {
   height: 13px;
   text-align: center;
+
+  &__checkbox {
+    cursor: pointer;
+  }
 }

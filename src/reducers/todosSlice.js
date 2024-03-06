@@ -26,9 +26,18 @@ const todoSlice = createSlice({
     removeTask: (state, action) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
     },
+    toggleCompleted: (state, action) => {
+      const { id } = action.payload;
+      const todoToToggle = state.todos.find((todo) => todo.id === id);
+      if (todoToToggle) {
+        todoToToggle.completed = !todoToToggle.completed;
+      }
+    },
   },
 });
 
-export const { addNewTask, removeTask, changeTodos } = todoSlice.actions;
+export const { addNewTask, removeTask, changeTodos, toggleCompleted } =
+  todoSlice.actions;
 export const selectItemsCount = (state) => state.todo.todos.length;
+export const selectAllItemsFromTodo = (state) => state.todo.todos;
 export default todoSlice.reducer;

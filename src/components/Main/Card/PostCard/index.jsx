@@ -1,6 +1,9 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { changeTodos, removeTask } from "../../../../reducers/todosSlice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  removeTask,
+  toggleCompleted,
+} from "../../../../reducers/todosSlice";
 import Input from "../Input";
 // Images
 import Edit from "../../../../assets/images/Edit Square.svg";
@@ -17,19 +20,18 @@ const PostCard = ({
   setCardsIsOpen,
   cardsIsOpen,
 }) => {
-  const [complete, setComplete] = useState(completed);
-  const [taskText, setTaskText] = useState(title);
   const dispatch = useDispatch();
+  const [complete, setComplete] = useState(completed);
 
   const handleChangeTodoText = (id) => {
     setNewText(title);
     setIdTitle(id);
     setCardsIsOpen(!cardsIsOpen);
-
   };
 
   const handleChange = () => {
     setComplete(!complete);
+    dispatch(toggleCompleted({ id }));
   };
 
   const handleRemove = () => {
@@ -47,20 +49,17 @@ const PostCard = ({
                 ? { textDecoration: "line-through", color: "blue" }
                 : undefined
             }
+            className={styles.card__title}
+            onClick={() => handleChange()}
           >
             {title}
           </p>
         </div>
         <div className={styles.card__edit}>
-          <div className={styles.card__data}>
-            <p>May 20, 2020</p>
-          </div>
           <div className={styles.card__btn}>
             <button
               className={styles.card__button}
-              onClick={() =>
-                handleChangeTodoText(id)
-              }
+              onClick={() => handleChangeTodoText(id)}
             >
               <img src={Edit} alt="edit" />
             </button>

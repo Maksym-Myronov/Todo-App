@@ -2,7 +2,6 @@ import { usePagination } from "../../hooks/usePagination";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { addNewTask, changeTodos } from "../../reducers/todosSlice.js";
-import Pagination from "./Pagination/index.jsx";
 import BurgerMenu from "../BurgerMenu/index";
 import Card from "./Card";
 // Images
@@ -81,16 +80,6 @@ const Main = () => {
           setCardsIsOpen={setCardsIsOpen}
           cardsIsOpen={cardsIsOpen}
         />
-        {currentItems && currentItems.length > 0 && (
-          <Pagination
-            handlePreviousPage={handlePreviousPage}
-            handleFirstPage={handleFirstPage}
-            handleNextPage={handleNextPage}
-            handleLastPage={handleLastPage}
-            currentPage={currentPage}
-            totalPages={totalPages}
-          />
-        )}
       </div>
     </div>
   );

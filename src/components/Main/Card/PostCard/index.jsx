@@ -1,9 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  removeTask,
-  toggleCompleted,
-} from "../../../../reducers/todosSlice";
+import { removeTask, toggleCompleted } from "../../../../reducers/todosSlice";
 import Input from "../Input";
 // Images
 import Edit from "../../../../assets/images/Edit Square.svg";

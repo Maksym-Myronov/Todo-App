@@ -3,9 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 
 export const usePagination = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 9;
+  const itemsPerPage = 58;
   const elementTodo = useSelector((state) => state.todo.todos);
-  const dispatch = useDispatch();
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentItems =

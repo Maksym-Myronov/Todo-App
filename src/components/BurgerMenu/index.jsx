@@ -20,7 +20,7 @@ const BurgerMenu = ({
   const dispatch = useDispatch();
 
   const newFunc = () => {
-    setNewText("")
+    setNewText("");
     dispatch(changeTodos({ id: idTitle, newText }));
     setCardsIsOpen(!cardsIsOpen);
   };
